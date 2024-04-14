@@ -22,7 +22,8 @@ std::string infx2pstfx(std::string inf) {
         } else if (c == '(') {
             stack1.push(c);
         } else if (BoolOperator(c)) {
-            while (!stack1.IsEmptyy() && Priorety(stack1.get()) >= Priorety(c)) {
+            while (!stack1.IsEmptyy() && \
+                Priorety(stack1.get()) >= Priorety(c)) {
                 postfix = postfix + stack1.get() + ' ';
                 stack1.pop();
             }
